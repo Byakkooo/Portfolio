@@ -1,0 +1,138 @@
+@use "../../styles/variables" as *;
+
+.projects {
+  background: $background-secondary;
+
+  &__label {
+    margin-bottom: 15px;
+    color: $primary;
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.project {
+  overflow: hidden;
+  border: 1px solid $border;
+  border-radius: $radius-large;
+  background: $card-background;
+  transition: $transition;
+
+  &:hover {
+    border-color: $primary;
+    transform: translateY(-4px);
+  }
+
+  &__image {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: $background;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &:hover &__image img {
+    transform: scale(1.02);
+  }
+
+  &__content {
+    padding: 35px;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__number {
+    color: $primary;
+    font-weight: 700;
+  }
+
+  &__category {
+    color: $accent;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    margin: 10px 0 15px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  p {
+    max-width: 750px;
+    color: $text-secondary;
+  }
+
+  ul {
+    margin: 20px 0 20px 20px;
+    color: $text-secondary;
+
+    li {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    span {
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(77, 168, 255, 0.1);
+      color: $primary;
+      font-size: 0.85rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+
+    a {
+      padding: 10px 16px;
+      border: 1px solid $border;
+      border-radius: $radius-small;
+      font-weight: 600;
+      transition: $transition;
+
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    &__content {
+      padding: 25px 20px;
+    }
+
+    &__links {
+      flex-direction: column;
+
+      a {
+        text-align: center;
+      }
+    }
+  }
+}

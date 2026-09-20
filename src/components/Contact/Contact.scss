@@ -1,0 +1,121 @@
+@use "../../styles/variables" as *;
+
+.contact {
+  position: relative;
+  overflow: hidden;
+
+  background: $background-secondary;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(77, 168, 255, 0.08);
+
+    border-radius: 50%;
+    filter: blur(100px);
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+
+    text-align: center;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+
+    color: $primary;
+    font-weight: 600;
+  }
+
+  h2 {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &__description {
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    color: $text-secondary;
+
+    font-size: 1.05rem;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 40px;
+
+    a {
+      padding: 13px 20px;
+
+      border: 1px solid $border;
+      border-radius: $radius-small;
+
+      font-weight: 600;
+
+      transition:
+        transform $transition,
+        border-color $transition,
+        color $transition,
+        background $transition;
+
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &__primary {
+    border-color: $primary !important;
+
+    background: $primary;
+    color: $background;
+
+    &:hover {
+      background: $primary-hover;
+      color: $background !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    &__links {
+      flex-direction: column;
+
+      a {
+        width: 100%;
+      }
+    }
+  }
+}

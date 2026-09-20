@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  padding: 30px 24px;
+
+  border-top: 1px solid $border;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: $text-secondary;
+    font-size: 0.9rem;
+  }
+
+  a {
+    transition: $transition;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

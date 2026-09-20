@@ -1,0 +1,166 @@
+@use "../../styles/variables" as *;
+
+.header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: rgba(8, 12, 20, 0.9);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  &__container {
+    max-width: $max-width;
+    height: 75px;
+
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    a {
+      color: $text-secondary;
+
+      transition:
+        color $transition,
+        border-color $transition,
+        background $transition;
+
+      &:hover {
+        color: $text-primary;
+      }
+    }
+  }
+
+  &__contact {
+    padding: 9px 18px;
+
+    border: 1px solid $primary;
+    border-radius: $radius-small;
+
+    color: $primary !important;
+
+    &:hover {
+      background: rgba(77, 168, 255, 0.1);
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 9px;
+
+    border: 0;
+
+    background: transparent;
+
+    span {
+      display: block;
+
+      width: 25px;
+      height: 2px;
+
+      margin: 5px 0;
+
+      background: $text-primary;
+
+      transition: $transition;
+    }
+
+    &--open {
+      span {
+        &:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__toggle {
+      display: block;
+    }
+
+    &__nav {
+      position: absolute;
+
+      top: 75px;
+      left: 0;
+
+      width: 100%;
+
+      padding: 30px;
+
+      flex-direction: column;
+
+      background: $background-secondary;
+
+      border-bottom: 1px solid $border;
+
+      transform: translateY(-150%);
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transition:
+        transform $transition,
+        opacity $transition,
+        visibility $transition;
+
+      &--open {
+        transform: translateY(0);
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      a {
+        width: 100%;
+
+        padding: 10px;
+
+        text-align: center;
+      }
+    }
+  }
+}

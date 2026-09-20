@@ -1,0 +1,36 @@
+@use "../../styles/variables" as *;
+
+.about {
+  background: $background-secondary;
+
+  &__label {
+    color: $primary;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+
+    margin-top: 40px;
+
+    p {
+      color: $text-secondary;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    strong {
+      color: $text-primary;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

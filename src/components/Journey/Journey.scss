@@ -1,0 +1,62 @@
+@use "../../styles/variables" as *;
+
+.journey {
+  &__label {
+    color: $primary;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  &__timeline {
+    position: relative;
+
+    max-width: 800px;
+
+    margin-top: 50px;
+    padding-left: 35px;
+
+    border-left: 1px solid $border;
+
+    article {
+      position: relative;
+
+      padding-bottom: 50px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    h3 {
+      margin: 6px 0 10px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      color: $text-secondary;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+
+    left: -43px;
+    top: 5px;
+
+    width: 15px;
+    height: 15px;
+
+    border: 3px solid $background;
+
+    border-radius: 50%;
+    background: $primary;
+
+    box-shadow: 0 0 0 3px rgba(77, 168, 255, 0.25);
+  }
+
+  &__date {
+    color: $primary;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+}

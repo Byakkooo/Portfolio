@@ -1,0 +1,126 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 120px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(77, 168, 255, 0.12),
+      transparent 30%
+    ),
+    $background;
+
+  &__container {
+    max-width: 950px;
+  }
+
+  &__intro {
+    color: $primary;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    line-height: 1;
+    letter-spacing: -4px;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  h2 {
+    margin-top: 18px;
+
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: $text-secondary;
+  }
+
+  &__description {
+    max-width: 700px;
+
+    margin-top: 30px;
+
+    color: $text-secondary;
+    font-size: 1.1rem;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+
+    margin-top: 35px;
+
+    a {
+      padding: 13px 22px;
+
+      border-radius: $radius-small;
+      font-weight: 600;
+
+      transition: $transition;
+    }
+  }
+
+  &__primary {
+    background: $primary;
+    color: $background;
+
+    &:hover {
+      background: $primary-hover;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__secondary {
+    border: 1px solid $border;
+
+    &:hover {
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 40px;
+
+    color: $text-secondary;
+    font-size: 0.9rem;
+
+    span {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: $accent;
+      box-shadow: 0 0 12px $accent;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    h1 {
+      letter-spacing: -2px;
+    }
+
+    &__actions {
+      flex-direction: column;
+
+      a {
+        text-align: center;
+      }
+    }
+  }
+}
