@@ -14,8 +14,8 @@ function Hero() {
 
         <p className="hero__description">
           Je conçois des expériences web modernes, accessibles et performantes.
-          Je poursuis aujourd'hui mon parcours vers la cybersécurité avec
-          l'objectif d'allier développement et sécurité des systèmes
+          Aujourd'hui étudiant à Guardia Cybersecurity School, je me spécialise
+          en cybersécurité pour allier développement et sécurité des systèmes
           d'information.
         </p>
 
@@ -31,7 +31,7 @@ function Hero() {
 
         <div className="hero__status">
           <span></span>
-          Prochaine étape : cybersécurité
+          Actuellement étudiant à Guardia Cybersecurity School
         </div>
       </div>
     </section>

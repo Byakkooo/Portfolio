@@ -13,7 +13,7 @@ function Journey() {
             <span className="journey__dot"></span>
 
             <div>
-              <span className="journey__date">Formation actuelle</span>
+              <span className="journey__date">Formation précédente</span>
 
               <h3>Développeur Web — OpenClassrooms</h3>
 
@@ -28,13 +28,15 @@ function Journey() {
             <span className="journey__dot"></span>
 
             <div>
-              <span className="journey__date">Prochaine étape</span>
+              <span className="journey__date">Aujourd'hui</span>
 
-              <h3>Guardia Cybersecurity School</h3>
+              <h3>Étudiant — Guardia Cybersecurity School</h3>
 
               <p>
-                Poursuite d'études en cybersécurité afin de développer mes
-                compétences en sécurité des systèmes d'information.
+                Infrastructures (AD, DNS, DHCP), sécurisation réseau et
+                pare-feu, analyse de vulnérabilités, supervision avec Wazuh
+                (SIEM), IA appliquée à la détection d'anomalies. Actuellement :
+                programmation Python, API REST et démarche DevOps / DevSecOps.
               </p>
             </div>
           </article>

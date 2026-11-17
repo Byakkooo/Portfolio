@@ -28,9 +28,12 @@ function About() {
 
           <div>
             <p>
-              Après cette formation, je poursuis mes études à{" "}
-              <strong>Guardia Cybersecurity School</strong> afin de me
-              spécialiser en cybersécurité.
+              Je suis aujourd'hui étudiant à{" "}
+              <strong>Guardia Cybersecurity School</strong>, où je me
+              spécialise en cybersécurité : administration et sécurisation
+              d'infrastructures, pare-feu, supervision avec un SIEM (Wazuh) et
+              usage de l'IA appliquée à la détection d'anomalies. J'y développe
+              aussi mes compétences en Python, API REST et DevSecOps.
             </p>
 
             <p>

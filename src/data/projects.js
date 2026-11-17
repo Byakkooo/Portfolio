@@ -8,6 +8,8 @@ export const projects = [
     title: "Menu Maker by Qwenta",
     category: "Gestion de projet",
     image: menuMakerImage,
+    imageWidth: 368,
+    imageHeight: 88,
     alt: "Aperçu du projet Menu Maker by Qwenta",
     description:
       "Préparation et planification d'une application permettant aux restaurateurs de créer et personnaliser leurs menus.",
@@ -33,6 +35,8 @@ export const projects = [
     title: "ArgentBank",
     category: "Application React",
     image: argentBankImage,
+    imageWidth: 456,
+    imageHeight: 124,
     alt: "Aperçu de l'application ArgentBank",
     description:
       "Développement d'une application bancaire avec authentification, gestion du profil utilisateur et communication avec une API REST.",

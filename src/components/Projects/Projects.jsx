@@ -24,8 +24,8 @@ function Projects() {
                   src={project.image}
                   alt={project.alt}
                   loading="lazy"
-                  width="800"
-                  height="450"
+                  width={project.imageWidth}
+                  height={project.imageHeight}
                 />
               </div>
 
